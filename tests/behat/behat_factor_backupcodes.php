@@ -55,8 +55,10 @@ class behat_factor_backupcodes extends behat_base {
      * @Given /^I choose backup codes on the verification page$/
      */
     public function i_choose_backup_codes_on_the_verification_page(): void {
-        $button = $this->getSession()->getPage()->find('xpath',
-            "//form[.//input[@name='factorname' and @value='backupcodes']]//button");
+        $button = $this->getSession()->getPage()->find(
+            'xpath',
+            "//form[.//input[@name='factorname' and @value='backupcodes']]//button"
+        );
         if (!$button) {
             throw new ExpectationException('No backup codes option on the page', $this->getSession());
         }
