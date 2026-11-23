@@ -28,5 +28,6 @@ Feature: Sign in with a backup code
     Then I should see "Acceptance test site"
     And I follow "Preferences" in the user menu
     And I click on "Multi-factor authentication preferences" "link"
+    And I should see "You have 9 backup codes left." in the "#factor-card-backupcodes" "css_element"
     And I click on "Manage backup codes" "button"
     And I should see "Backup codes (9 left)"

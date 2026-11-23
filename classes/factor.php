@@ -269,6 +269,16 @@ class factor extends object_factor_base {
     }
 
     /**
+     * Shown on the factor's card on the MFA preferences page.
+     *
+     * @param int $factorid
+     * @return string
+     */
+    public function get_manage_info(int $factorid): string {
+        return get_string('manageinfo', 'factor_backupcodes', $this->remaining_codes());
+    }
+
+    /**
      * All sets of this user.
      *
      * @param stdClass $user

@@ -14,6 +14,6 @@ At sign in, the MFA page offers **Use a backup code**. Each code works once. Use
 - Only one-way hashes of the codes are stored (PHP password_hash), so a database copy does not reveal them.
 - Codes look like `k7m3q-x9wdp`: no i, l, o, 0 or 1. Capitals, spaces and the hyphen are ignored when typing.
 - Wrong codes count towards MFA's lockout, like other factors.
-- The factor's label shows how many codes are left, for example "Backup codes (9 left)".
+- Users see how many codes are left on their MFA preferences page ("You have 9 backup codes left.").
 
 Moodle 4.5 to 5.3. Built by DevLMS: https://devlms.com
