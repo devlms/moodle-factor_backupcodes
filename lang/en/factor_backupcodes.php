@@ -35,6 +35,7 @@ $string['labelcount'] = 'Backup codes ({$a} left)';
 $string['logindesc'] = 'Enter one of your backup codes. Each code works once.';
 $string['loginoption'] = 'Use a backup code';
 $string['loginskip'] = 'I don\'t have my codes';
+$string['logintitle'] = 'Enter a backup code';
 $string['loginsubmit'] = 'Continue';
 $string['managefactor'] = 'Manage backup codes';
 $string['managefactorbutton'] = 'Manage';
