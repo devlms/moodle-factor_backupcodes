@@ -22,7 +22,8 @@ Feature: Sign in with a backup code
     And I should see "Active" in the "#factor-card-backupcodes" "css_element"
     And I log out
     When I log in as "admin"
-    And I press "Use a backup code"
+    And I should see "Use a backup code"
+    And I choose backup codes on the verification page
     And I enter the remembered backup code
     And I press "Continue"
     Then I should see "Acceptance test site"
