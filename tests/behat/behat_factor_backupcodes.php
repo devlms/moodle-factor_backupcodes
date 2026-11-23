@@ -49,12 +49,16 @@ class behat_factor_backupcodes extends behat_base {
     }
 
     /**
-     * Switch the MFA page to backup codes. The button's name differs between versions (4.5 adds the icon label), so
-     * find it by the form that chooses this factor.
+     * Switch the MFA page to backup codes, unless it already asks for one. The button's name differs between versions
+     * (4.5 adds the icon label), so find it by the form that chooses this factor.
      *
      * @Given /^I choose backup codes on the verification page$/
      */
     public function i_choose_backup_codes_on_the_verification_page(): void {
+        if ($this->getSession()->getPage()->find('css', 'input[name="backupcode"]')) {
+            // Backup codes is the factor asked first (no other factor before it on this site).
+            return;
+        }
         $button = $this->getSession()->getPage()->find(
             'xpath',
             "//form[.//input[@name='factorname' and @value='backupcodes']]//button"
